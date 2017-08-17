@@ -8,7 +8,7 @@
     android:padding="3dp"
     tools:context="com.example.asmaa.swapme.MainActivity">
 <fragment
-    android:name="com.example.asmaa.swapme.FragmentGride"
+    android:name="com.example.asmaa.swapme.FragmentGrid"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/fragmet_grid"
