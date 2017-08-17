@@ -3,6 +3,7 @@ package com.example.asmaa.swapme;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,6 @@ int h=1;
                     //saved=head[h];
 
                 }
-
             }
         });
         return v;
@@ -41,14 +41,16 @@ int h=1;
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("head",head[saved]);
+        outState.putInt("head",saved);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         if (savedInstanceState != null) {
-            imgHead.setImageResource(savedInstanceState.getInt("head"));}
+            Log.e("tag", "onActivityCreated: "+savedInstanceState.getInt("head"));
+
+            imgHead.setImageResource(head[savedInstanceState.getInt("head")]);}
 
     }
 }
